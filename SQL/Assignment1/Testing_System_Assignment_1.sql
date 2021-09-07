@@ -1,8 +1,10 @@
 CREATE DATABASE Testing_System_Assignment_1;
 USE Testing_System_Assignment_1;
+DROP TABLE Department;
 CREATE TABLE Department(
 	 DepartmentID 	TINYINT,
 	 DepartmentName VARCHAR(50)
+     
 );
 CREATE TABLE `Position`(
 	PositionID 		TINYINT ,
