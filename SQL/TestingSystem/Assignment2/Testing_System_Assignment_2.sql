@@ -134,7 +134,7 @@ INSERT INTO Exam(`Code`,Title,CategoryID,Duration,CreatorID) VALUES (11,'Tieu de
                                                                     (13,'Tieu de bai thi 13 ', 1,5000,3),
                                                                     (14,'Tieu de bai thi 14 ', 3,3000,5),
                                                                     (15,'Tieu de bai thi 15 ', 3,1000,5),
-                                                                    (16,'Tieu de bai thi 16 ', 4,5000,2);
--- SELECT*FROM Exam;
+                                                                    (16,'Tieu de bai thi 16 ', 4,4000,2);
+ SELECT*FROM Exam;
 INSERT INTO ExamQuestion(ExamID,QuestionID) VALUES (1,2),(1,3),(2,2),(3,4),(2,3),(5,6),(5,5);
 -- SELECT*FROM ExamQuestion;
