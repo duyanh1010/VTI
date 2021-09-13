@@ -46,3 +46,20 @@ FROM
         JOIN
    orderdetails as o ON p.productCode=o.productCode
    GROUP BY (p.productCode);
+   -- Q4. Lợi nhuận của mặt hàng nào nhiều nhất
+SELECT 
+ p.productCode,SUM(o.quantityOrdered*priceEach)
+FROM
+    products p
+        JOIN
+   orderdetails as o ON p.productCode=o.productCode
+   GROUP BY (p.productCode) 
+   ORDER BY SUM(o.quantityOrdered*priceEach) DESC
+   LIMIT 1;
+-- Q5. Thông kê mỗi thành phố có bao nhiêu employees
+SELECT*FROM employees;
+SELECT* from customers;
+ SELECT c.city, COUNT(c.salesRepEmployeeNumber) FROM employees e 
+RIGHT JOIN
+customers c ON e.employeeNumber=c.salesRepEmployeeNumber
+GROUP BY city
