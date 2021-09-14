@@ -30,7 +30,7 @@ CREATE TABLE Data_Types_3(
 	ID_3				INT UNSIGNED PRIMARY KEY AUTO_INCREMENT, -- mediumint,bigint
     `Name_3`			VARCHAR(50),
     BirthDate			DATETIME,
-    Gender				BIT,
-    IsDeletedFlag		BOOLEAN
+    Gender				BIT NULL,
+    IsDeletedFlag		BIT
 );
 

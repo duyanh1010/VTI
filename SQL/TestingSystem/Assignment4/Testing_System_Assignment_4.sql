@@ -41,13 +41,22 @@ FROM
     ORDER BY dem DESC;
 -- Question 5: Viết lệnh để lấy ra danh sách câu hỏi được sử dụng trong đề thi nhiều
 -- nhất
-SELECT q.*,COUNT(eq.QuestionID)  
+SELECT q.*,COUNT(eq.ExamID)  
 FROM Question q 
  JOIN ExamQuestion eq
 ON q.QuestionID=eq.QuestionID 
 GROUP BY eq.QuestionID 
-ORDER BY COUNT(eq.QuestionID) DESC 
+ORDER BY COUNT(eq.ExamID) DESC 
 LIMIT 1;
+-- cách 2 
+SELECT q.*,COUNT(eq.ExamID)  as demex
+FROM Question q 
+JOIN ExamQuestion eq
+ON q.QuestionID=eq.QuestionID 
+GROUP BY eq.QuestionID 
+HAVING demex= (SELECT Max(demex) FROM (SELECT COUNT(eq.ExamID) as demex  FROM Question q RIGHT JOIN ExamQuestion eq
+ON q.QuestionID=eq.QuestionID 
+GROUP BY eq.QuestionID) as max );
 -- Question 6: Thông kê mỗi category Question được sử dụng trong bao nhiêu Question
 SELECT c.*,COUNT(q.QuestionID) FROM CategoryQuestion c LEFT JOIN Question q ON c.CategoryID=q.CategoryID 
 GROUP BY CategoryID 
@@ -93,11 +102,12 @@ GROUP BY PositionName
 ORDER BY COUNT(a.AccountID) 
 LIMIT 1;
 -- Question 11: Thống kê mỗi phòng ban có bao nhiêu dev, test, scrum master, PM
-SELECT p.*, COUNT(a.AccountID) 
+SELECT d.*, p.*, COUNT(a.AccountID) 
 FROM Position p 
-LEFT JOIN `Account` a 
+RIGHT JOIN `Account` a 
 ON p.PositionID=a.PositionID
-GROUP BY PositionName
+CROSS JOIN department d ON d.DepartmentID=a.DepartmentID
+GROUP BY DepartmentID, PositionName
 ORDER BY COUNT(a.AccountID) ;
 -- Question 12: Lấy thông tin chi tiết của câu hỏi bao gồm: thông tin cơ bản của
 -- question, loại câu hỏi, ai là người tạo ra câu hỏi, câu trả lời là gì, ...
