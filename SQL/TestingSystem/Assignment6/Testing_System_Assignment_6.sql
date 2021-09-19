@@ -204,6 +204,23 @@ CREATE PROCEDURE exam_3year()
     END$$
 DELIMITER ;
 CALL exam_3year();
+-- cahc 2 xoa nhieu ho n1 cot 
+DROP PROCEDURE IF EXISTS exam_3year_cach2;
+DELIMITER $$
+CREATE PROCEDURE exam_3year_cach2(IN in_ExamID TINYINT UNSIGNED)
+	BEGIN
+		
+        WITH exam_3_yearold AS(
+		SELECT ExamID
+        FROM Exam WHERE year(now())-year( CreateDate	)>=3)
+		DELETE	
+		FROM	Exam
+		WHERE	ExamID = (SELECT* 
+					FROM 	exam_3_yearold
+					WHERE	ExamID = in_ExamID);
+    END$$
+DELIMITER ;
+CALL exam_3year_cach2(9);
 -- Question 11: Viết store cho phép người dùng xóa phòng ban bằng cách người dùng
 -- nhập vào tên phòng ban và các account thuộc phòng ban đó sẽ được
 -- chuyển về phòng ban default là phòng ban chờ việc
@@ -211,13 +228,14 @@ DROP PROCEDURE IF EXISTS delete_name_department;
 DELIMITER $$
 CREATE PROCEDURE delete_name_department(IN  in_DepartmentName VARCHAR(50))
 	BEGIN
-		WITH uni_accountupdate AS(
-		SELECT *FROM `Account` WHERE DepartmentID=(SELECT DepartmentID FROM Department WHERE DepartmentName='Bao ve'))
 		DELETE  FROM department WHERE DepartmentName='Bao ve';
         -- default là về phòng bán hàng 
-        (SELECT*FROM uni_accountupdate)
-        UNION
-		(SELECT *FROM `Account` WHERE DepartmentID=(SELECT DepartmentID FROM department WHERE DepartmentName='Ban Hang')) ;
+        UPDATE Department
+        SET  DepartmentName='Ban Hang'
+        WHERE DepartmentName=in_DepartmentName;
+        -- (SELECT*FROM uni_accountupdate)
+--         UNION
+-- 		(SELECT *FROM `Account` WHERE DepartmentID=(SELECT DepartmentID FROM department WHERE DepartmentName='Ban Hang')) ;
 		
     END$$
 DELIMITER ;    
