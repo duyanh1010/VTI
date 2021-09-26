@@ -746,7 +746,31 @@ public class Program {
 //		chương trình sẽ chuyển thành Position.Dev, Position.Test,
 //		Position.ScrumMaster, Position.PM
 //
-//	
+//		5
+		thongTinAccount();
+	}
+
+	public static void thongTinAccount() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Moi ban nhap so tu 1 den 5");
+		int so = scanner.nextInt();
+		switch (so) {
+		case 1:
+			System.out.println("Position.DEV");
+			break;
+
+		case 2:
+			System.out.println("Position.Test");
+			break;
+
+		case 3:
+			System.out.println("Position.ScrumMaster");
+			break;
+
+		case 4:
+			System.out.println("Position.PM");
+			break;
+		}
 //
 //		Question 6:
 //		Viết lệnh cho phép người dùng tạo department (viết thành method)
