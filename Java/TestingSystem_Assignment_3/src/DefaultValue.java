@@ -1,7 +1,7 @@
 
 public class DefaultValue {
 
-	public static void main(String[] args) {
+	public static void main(java.lang.String[] args) {
 //		Exercise 2 (Optional): Default value
 //		Question 1:
 //		Không sử dụng data đã insert từ bài trước, tạo 1 array Account và khởi

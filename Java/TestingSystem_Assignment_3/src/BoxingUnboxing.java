@@ -1,7 +1,7 @@
 
 public class BoxingUnboxing {
 
-	public static void main(String[] args) {
+	public static void main(java.lang.String[] args) {
 		bai1();
 		System.out.println("\n");
 		bai2();
@@ -25,7 +25,7 @@ public class BoxingUnboxing {
 //		Khai báo 1 String có value = "1234567"
 //		Hãy convert String đó ra số int
 	public static void bai2() {
-		String str="1234567";
+		java.lang.String str="1234567";
 		int str1=Integer.parseInt(str);
 		System.out.println("chuoi la:"+str1);
 	}

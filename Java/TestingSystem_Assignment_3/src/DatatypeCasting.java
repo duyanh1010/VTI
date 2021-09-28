@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class DatatypeCasting {
 
-	public static void main(String[] args) {
+	public static void main(java.lang.String[] args) {
 		bai1();
 		bai2();
 		bai3();
@@ -13,11 +13,11 @@ public class DatatypeCasting {
 
 //	Exercise 1 (Optional): Datatype Casting
 //	Question 1:
-//	Khai báo 2 số lương có kiểu dữ liệu là float.
-//	Khởi tạo Lương của Account 1 là 5240.5 $
-//	Khởi tạo Lương của Account 2 là 10970.055$
-//	Khai báo 1 số int để làm tròn Lương của Account 1 và in số int đó ra
-//	Khai báo 1 số int để làm tròn Lương của Account 2 và in số int đó ra
+//	Khai bÃ¡o 2 sá»‘ lÆ°Æ¡ng cÃ³ kiá»ƒu dá»¯ liá»‡u lÃ  float.
+//	Khá»Ÿi táº¡o LÆ°Æ¡ng cá»§a Account 1 lÃ  5240.5 $
+//	Khá»Ÿi táº¡o LÆ°Æ¡ng cá»§a Account 2 lÃ  10970.055$
+//	Khai bÃ¡o 1 sá»‘ int Ä‘á»ƒ lÃ m trÃ²n LÆ°Æ¡ng cá»§a Account 1 vÃ  in sá»‘ int Ä‘Ã³ ra
+//	Khai bÃ¡o 1 sá»‘ int Ä‘á»ƒ lÃ m trÃ²n LÆ°Æ¡ng cá»§a Account 2 vÃ  in sá»‘ int Ä‘Ã³ ra
 	public static void bai1() {
 		float luong1 = 5240.5f, luong2 = 10970.055f;
 		int luongAccount1 = (int) luong1;
@@ -27,13 +27,13 @@ public class DatatypeCasting {
 
 	}
 //	Question 2:
-//		Lấy ngẫu nhiên 1 số có 5 chữ số (những số dưới 5 chữ số thì sẽ thêm
-//		có số 0 ở đầu cho đủ 5 chữ số)
+//		Láº¥y ngáº«u nhiÃªn 1 sá»‘ cÃ³ 5 chá»¯ sá»‘ (nhá»¯ng sá»‘ dÆ°á»›i 5 chá»¯ sá»‘ thÃ¬ sáº½ thÃªm
+//		cÃ³ sá»‘ 0 á»Ÿ Ä‘áº§u cho Ä‘á»§ 5 chá»¯ sá»‘)
 
 	public static void bai2() {
 		Random random = new Random();
 		int x = random.nextInt(100000);
-		String so5chuso = x + "";
+		java.lang.String so5chuso = x + "";
 		switch (so5chuso.length()) {
 		case 1:
 
@@ -59,13 +59,13 @@ public class DatatypeCasting {
 	}
 
 //	Question 3:
-//		Lấy 2 số cuối của số ở Question 2 và in ra.
-//		Gợi ý:
-//		Cách 1: convert số có 5 chữ số ra String, sau đó lấy 2 số cuối
+//		Láº¥y 2 sá»‘ cuá»‘i cá»§a sá»‘ á»Ÿ Question 2 vÃ  in ra.
+//		Gá»£i Ã½:
+//		CÃ¡ch 1: convert sá»‘ cÃ³ 5 chá»¯ sá»‘ ra String, sau Ä‘Ã³ láº¥y 2 sá»‘ cuá»‘i
 	public static void bai3() {
 		Random random = new Random();
 		int x = random.nextInt(100000);
-		String so5chuso = x + "";
+		java.lang.String so5chuso = x + "";
 		switch (so5chuso.length()) {
 		case 1:
 
@@ -88,15 +88,15 @@ public class DatatypeCasting {
 			break;
 		}
 		
-		String haisocuoi=so5chuso.substring(so5chuso.length() - (so5chuso.length()-3));
+		java.lang.String haisocuoi=so5chuso.substring(so5chuso.length() - (so5chuso.length()-3));
 		System.out.println(haisocuoi);
 	}
 
-//		Cách 2: chia lấy dư số đó cho 100
+//		CÃ¡ch 2: chia láº¥y dÆ° sá»‘ Ä‘Ã³ cho 100
 	public static void bai3b() {
 		Random random = new Random();
 		int x = random.nextInt(100000);
-		String so5chuso = x + "";
+		java.lang.String so5chuso = x + "";
 		switch (so5chuso.length()) {
 		case 1:
 
@@ -123,7 +123,7 @@ public class DatatypeCasting {
 		System.out.println(haisocuoi);
 	}
 //	Question 4:
-//		Viết 1 method nhập vào 2 số nguyên a và b và trả về thương của chúng
+//		Viáº¿t 1 method nháº­p vÃ o 2 sá»‘ nguyÃªn a vÃ  b vÃ  tráº£ vá»� thÆ°Æ¡ng cá»§a chÃºng
 	public static void bai4() {
 		int a,b;
 		Scanner sc=new Scanner(System.in);
