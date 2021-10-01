@@ -841,6 +841,115 @@ public class Program {
 			break;
 		}
 	}
+//	Viết method cho phép người dùng thêm account vào group theo flow sau:
+//	Bước 1:
+//	In ra tên các usernames của user cho người dùng xem
+//	Bước 2:
+//	Yêu cầu người dùng nhập vào username của account
+//	Bước 3:
+//	In ra tên các group cho người dùng xem
+//	Bước 4:
+//	Yêu cầu người dùng nhập vào tên của group
+//	Bước 5:
+//	Dựa vào username và tên của group người dùng vừa chọn, hãy
+//	thêm account vào group đó .
+	public static void bai9 () {
+		Scanner user = new Scanner(System.in);
+		String usernames = user.nextLine();
+		System.out.println("danh sach user: " + usernames);
+		System.out.println("hay nhap user name muon chon : ");
+		String x = user.nextLine();
+		String group =  user.nextLine();
+		System.out.println("danh sach group là: "+ group);
+		System.out.println("nhap ten group: ");
+		
+		
+	
+	}
+//	Question 10: Tiếp tục Question 8 và Question 9
+//	Bổ sung thêm vào bước 2 của Question 8 như sau:
+//	Nếu người dùng nhập vào 3 thì sẽ thực hiện chức năng thêm group vào
+//	account
+//	Bổ sung thêm Bước 3 của Question 8 như sau:
+//	Sau khi người dùng thực hiện xong chức năng ở bước 2 thì in ra dòng
+//	text để hỏi người dùng "Bạn có muốn thực hiện chức năng khác
+//	không?". Nếu người dùng chọn "Có" thì quay lại bước 1, nếu người
+//	dùng chọn "Không" thì 
+	public static void 	bai10 () {
+			Scanner Scanner = new Scanner(System.in);
+			
+			System.out.print("mời bạn nhập vào chức năng muốn sử dụng : ");
+			int z = Scanner.nextInt(4);
+			switch (z) {
+			case 1:{
+				System.out.println("Nhap vao Account ID:");
+				int accountid = Scanner.nextInt();
+				System.out.println("Nhap vao Department ID:");
+				int department = Scanner.nextInt();
+				System.out.println("Nhập vào email của bạn : ");
+				String email = Scanner.nextLine();
+				System.out.println("Nhập vào usernames của bạn : ");
+				String usernames = Scanner.nextLine();
+				System.out.print("Nhập vào số positionid :");
+				int i = Scanner.nextInt(6);
+				switch (i) {
+				case 1:
+					System.out.print("position.Dev");
+					break;
+				case 2:
+					System.out.print("position.Test"); 
+					break;
+				case 3:
+					System.out.print("position.ScrumMaster");
+					break;
+				case 4:
+					System.out.print("position.PM");
+					break;
+				default:
+					System.out.print("position.SA");
+				}
+			}
+			break;
+			case 2: {
+				Scanner scanner = new Scanner(System.in);
+				System.out.println("Hãy nhập tên department mới :");
+				String department = scanner.nextLine();
+				}
+				break;
+			case 3:{
+				
+			}
+				
+			default:
+				System.out.println("nhap lai : ");
+				break;
+		
+			}
+	}
+	
+//	Exercise 6 (Optional): Method
+//	Question 1:
+//	Tạo method để in ra các số chẵn nguyên dương nhỏ hơn 10
 
+//	Question 3:
+//	Tạo method để in ra các số nguyên dương nhỏ hơn 10
+	
+		
+			public static void Question1 () {
+				for (int i = 0; i < 10; i++) {
+					if (i == 10) {
+						continue;
+					} else if (i % 2 == 0) {
+						System.out.println(i);
+					}
+				}
+			}
+			public static void Question3 () {
+				for (int j = 0; j < 10; j++) {
+					System.out.println(j);
+				}
+				
+			}
 
 }
+
