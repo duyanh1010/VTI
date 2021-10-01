@@ -771,11 +771,38 @@ public class Program {
 			System.out.println("Position.PM");
 			break;
 		}
+	}
+
 //
 //		Question 6:
 //		Viết lệnh cho phép người dùng tạo department (viết thành method)
+	public static void thongTinDepartment() {
+
+		Department department = new Department();
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Moi ban nhap thogn tin department id:");
+		int so = scanner.nextInt();
+		System.out.println("Moi ban nhap thogn tin department name:");
+		String name = scanner.nextLine();
+		department.departmentId = (byte) so;
+		department.departmentName = name;
+	}
+
 //		Question 7:
 //		Nhập số chẵn từ console
+	public static void nhapsochan() {
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Moi ban nhap mot so ");
+		int so = scanner.nextInt();
+		if (so % 2 == 0) {
+			System.out.println("ban da nhap dung");
+
+		} else {
+			System.out.println("xin hay nhap vao so chan");
+		}
+	}
+
 //		Question 8:
 //		Viết chương trình thực hiện theo flow sau:
 //		Bước 1:
@@ -788,45 +815,32 @@ public class Program {
 //		Nếu người dùng nhập vào số khác thì in ra text "Mời bạn nhập
 //		lại" và quay trở lại bước 1
 //
-//		Question 9:
-//		Viết method cho phép người dùng thêm group vào account theo flow sau:
-//		Bước 1:
-//		In ra tên các usernames của user cho người dùng xem
-//		Bước 2:
-//		Yêu cầu người dùng nhập vào username của account
-//		Bước 3:
-//		In ra tên các group cho người dùng xem
-//		Bước 4:
-//		Yêu cầu người dùng nhập vào tên của group
-//		Bước 5:
-//		Dựa vào username và tên của group người dùng vừa chọn, hãy
-//		thêm account vào group đó .
-//		Question 10: Tiếp tục Question 8 và Question 9
-//		Bổ sung thêm vào bước 2 của Question 8 như sau:
-//		Nếu người dùng nhập vào 3 thì sẽ thực hiện chức năng thêm group vào
-//		account
-//		Bổ sung thêm Bước 3 của Question 8 như sau:
-//		Sau khi người dùng thực hiện xong chức năng ở bước 2 thì in ra dòng
-//		text để hỏi người dùng "Bạn có muốn thực hiện chức năng khác
-//		không?". Nếu người dùng chọn "Có" thì quay lại bước 1, nếu người
-//		dùng chọn "Không" thì kết thúc chương trình (sử dụng lệnh return để
-//		kết thúc chương trình)
-//		Question 11: Tiếp tục Question 10
-//		Bổ sung thêm vào bước 2 của Question 8 như sau:
-//		Nếu người dùng nhập vào 4 thì sẽ thực hiện chức năng thêm account
-//		vào 1 nhóm ngẫu nhiên, chức năng sẽ được cài đặt như sau:
-//		Bước 1:
-//		In ra tên các usernames của user cho người dùng xem
-//
-//		6
-//
-//		Bước 2:
-//		Yêu cầu người dùng nhập vào username của account
-//		Bước 3:
-//		Sau đó chương trình sẽ chọn ngẫu nhiên 1 group
-//		Bước 4:
-//		Thêm account vào group chương trình vừa chọn ngẫu
-//		nhiên
+	public static void nhap() {
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Moi ban nhap chuc nang muon su dung ");
+		int so = scanner.nextInt();
+		switch (so) {
+		case 1:
+			Account account = new Account();
+			account.accountId = 8;
+			account.email = "duyan01@gmail.com";
+			account.userName = "Agnh";
+			account.fullName = "NguyenAnh";
+			account.department = null;
+			account.position = null;
+			account.createDate = LocalDateTime.of(2020, 11, 26, 13, 55, 36, 123);
+			break;
+		case 2:
+			Department department = new Department();
+			department.departmentId = 3;
+			department.departmentName = "van phong";
+			break;
+		default:
+			System.out.println("ban hya chon 1 hoac 2 xin hay nhap lai");
+			break;
+		}
 	}
+
 
 }
