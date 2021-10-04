@@ -23,7 +23,7 @@ public class VNPhone extends Phone {
 	@Override
 	public void removeContact() {
 		for (int i = 0; i < contacts.length; i++) {
-			if (contacts[i] != null && contacts[i].getName().equals("Ninh Thi Hien"))
+			if (contacts[i] != null && contacts[i].getName().equals("Nguyen DuyAnh"))
 				;
 			{
 				contacts[i] = null;
@@ -45,7 +45,7 @@ public class VNPhone extends Phone {
 	@Override
 	public void searchContact() {
 		for (int i = 0; i < contacts.length; i++) {
-			System.out.println(contacts[i].getName().equals("Ninh Thi Hien"));
+			System.out.println(contacts[i].getName().equals("Nguyen DuyAnh"));
 
 		}
 	}

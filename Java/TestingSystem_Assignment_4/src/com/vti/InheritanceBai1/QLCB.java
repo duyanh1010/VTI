@@ -40,6 +40,7 @@ public class QLCB {
 				break;
 			default:
 				System.out.println("Ban nhap sai, moi ban nhap lai");
+				i--;
 				break;
 			}
 		}
