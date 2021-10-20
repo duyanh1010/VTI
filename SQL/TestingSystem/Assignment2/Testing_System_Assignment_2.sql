@@ -10,7 +10,7 @@ CREATE TABLE Department(
 DROP TABLE IF EXISTS `Position`;
 CREATE TABLE `Position`(
 	PositionID 		TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT ,
-    PositionName 	ENUM('Dev', 'Test', 'Scrum Master', 'PM')
+    PositionName 	VARCHAR(255)
 );
 DROP TABLE IF EXISTS `Account`;
 CREATE TABLE `Account`(
@@ -96,6 +96,7 @@ INSERT INTO Department(DepartmentName) 	VALUES ('Marketing'),('Sale'),('Bao Ve')
 											   ('Tai Chinh'),('Pho Giam Doc'),('Giam Doc'),('Thu Ky'),('Ban Hang');
 -- SELECT*FROM Department;
 INSERT INTO `Position`(PositionName) 	VALUES ('Dev'), ('Test'), ('Scrum Master'), ('PM');	
+
 -- SELECT*FROM 	`Position`;
 INSERT INTO `Account`(Email,Username,FullName,DepartmentID,PositionID) 
 VALUES ('duyanhr01@gmail.com','Anh','NguyenDuyAnh',1,1),
@@ -168,3 +169,14 @@ VALUES
  SELECT*FROM Exam;
 INSERT INTO ExamQuestion(ExamID,QuestionID) VALUES (1,2),(1,3),(2,2),(3,4),(2,3),(5,6),(5,5),(10,10),(2,7),(6,6),(8,9),(8,6);
 -- SELECT*FROM ExamQuestion;
+SELECT*from Position;
+SELECT*from Department;
+-- DELIMITER $$
+-- CREATE PROCEDURE sp_delete_department(IN id INT)
+-- BEGIN
+-- 	DELETE FROM Department WHERE DepartmentID=id;
+-- END$$
+-- DELIMITER ;
+-- CALL sp_delete_department(9);
+
+
