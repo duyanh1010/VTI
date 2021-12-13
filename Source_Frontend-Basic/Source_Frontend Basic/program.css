@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    background-color: #ddd;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 70px;
+}
+
+.header .infor {
+    font-size: 12px;
+    color: white;
+    line-height: 50px;
+    float: right;
+    padding-right: 20px;
+}
+
+.header p {
+    font-size: 16px;
+    color: white;
+    line-height: 50px;
+    float: left;
+    padding-right: 20px;
+}
+
+.header h4 {
+    font-size: 18px;
+    color: white;
+    line-height: 50px;
+    float: left;
+    padding-right: 20px;
+}
+
+.header .btn-logout {
+    /* margin-top: 6px; */
+    font-size: 18px;
+    color: white;
+    float: right;
+    background-color: transparent;
+    border: none;
+}
+
+.footer {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.pagination {
+    margin: auto;
+}
+
+form.example input[type=text] {
+    padding: 20px;
+    font-size: 14px;
+    border: 1px solid rgb(202, 202, 202);
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    height: 40px;
+}
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 0px;
+    background: #2196F3;
+    color: white;
+    font-size: 14px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    height: 42px;
+    margin-top: 5px;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.search {
+    height: 50px;
+}

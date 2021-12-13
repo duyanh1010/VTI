@@ -1,0 +1,75 @@
+form.example input[type=text] {
+    padding: 20px;
+    font-size: 18px;
+    border: 1px solid rgb(202, 202, 202);
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    height: 40px;
+}
+
+li.disabled {
+    pointer-events: none;
+}
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 0px;
+    background: #2196F3;
+    color: white;
+    font-size: 14px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    height: 42px;
+    margin-top: 0px;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.search {
+    height: 50px;
+}
+
+.row {
+    /* color: red; */
+    justify-content: space-between;
+}
+
+.form .row .infor {
+    color: red;
+    justify-content: space-between;
+    margin-top: 10px;
+    float: left;
+}
+
+.form .row .infor .username {
+    /* float: left; */
+    color: black;
+    /* float: left; */
+}
+
+#username {
+    color: blue;
+    /* float: right; */
+}
+
+.form .row .infor .btn {
+    color: red;
+    border: none;
+    font-size: 20px;
+    /* float: right; */
+}

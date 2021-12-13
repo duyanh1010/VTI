@@ -13,9 +13,9 @@ public class Exercise1 {
 
 	// a, In ra tổng số phần tử của students
 	public static void countstudent() {
-		students.add(new Student(1, "Nguyen Thi A"));
-		students.add(new Student(2, "Nguyen Thi B"));
-		students.add(new Student(3, "Nguyen Thi C"));
+		students.add(new Student(1, "Nguyen Van A"));
+		students.add(new Student(2, "Nguyen Van B"));
+		students.add(new Student(3, "Nguyen Van C"));
 		System.out.println("So luong hoc sinh la: " + Student.counter);
 	}
 
@@ -25,7 +25,7 @@ public class Exercise1 {
 		try {
 			System.out.println(students.get(4));
 		} catch (IndexOutOfBoundsException e) {
-			System.err.println("Chi in duoc student trong mang tu 1 - 3");
+			System.err.println("Chi in duoc student 1-3");
 		}
 	}
 
@@ -41,14 +41,14 @@ public class Exercise1 {
 	// d, Thêm 1 phần tử vào vị trí đầu của students
 	public void addStudentIndextfirst() {
 		countstudent();
-		students.add(0, new Student(0, "Nguyen Thi A"));
+		students.add(0, new Student(0, "Nguyen Duy Anh"));
 		System.out.println(students);
 	}
 
 	// e) Thêm 1 phần tử vào vị trí cuối của students
 	public void addStudentIndextLast() {
 		countstudent();
-		students.add(new Student(4, "Nguyen Thi A"));
+		students.add(new Student(4, "Nguyen Duy Anh"));
 		System.out.println(students);
 	}
 
